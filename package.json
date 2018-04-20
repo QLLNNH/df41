@@ -1,0 +1,17 @@
+{
+  "name": "aegis",
+  "version": "0.0.1",
+  "description": "Object setter guard by proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "guard",
+    "shield",
+    "checker",
+    "verifier"
+  ],
+  "author": "chaconne",
+  "license": "ISC"
+}
