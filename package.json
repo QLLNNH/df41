@@ -16,6 +16,10 @@
   "dependencies": {
     "ramda": "0.25.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QLLNNH/athena-aegis.git"
+  },
   "author": "chaconne",
   "license": "ISC"
 }
