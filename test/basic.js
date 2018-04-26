@@ -1,16 +1,22 @@
 'use strict';
-const { hephaestus, strategies: { ARRAY, STRING, NUMBER } } = require('../index');
+const { hephaestus, strategies: { Arr, Str, Num } } = require('../index');
 
 const schema = {
-    name: [STRING.real(), STRING.not_empty()]
-    , age: [NUMBER.real(), NUMBER.range_c_c([3, 9])]
+    name: Str.of().non_empty()
+    , age: Num.of().condition(f).eq('17', 'eq error')
 };
 
 const aegis = hephaestus.forge(schema);
 
 const bank = aegis();
 
-bank.name = 'xushen';
-bank.age = 3;
+bank.name = 'xd';
+bank.age = '17';
 
 console.log(bank);
+
+function f(x) {
+    if (this.name === 'xushen') {
+        if (x === '18') throw 'f error';
+    }
+}

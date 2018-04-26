@@ -13,6 +13,9 @@
     "verifier",
     "validator"
   ],
+  "dependencies": {
+    "ramda": "0.25.0"
+  },
   "author": "chaconne",
   "license": "ISC"
 }
