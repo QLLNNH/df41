@@ -1,14 +1,13 @@
 'use strict';
-const { hephaestus, strategies: { Arr, Str, Num } } = require('../index');
+const { hephaestus, Arr, Str, Num } = require('../index');
 
 const schema = {
-    name: Str.of().non_empty().split(' ').fixed_length(2)
+    name: Str.of().split(' ').limited_length(2).join('').eq('hw')
 };
 
 const aegis = hephaestus.forge(schema);
 
 const bank = aegis();
 bank.name = 'h w';
-
 
 console.log(bank);

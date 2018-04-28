@@ -1,3 +1,4 @@
 'use strict';
+const { Arr, Str, Num } = require('./lib/strategies')
 
-module.exports = { strategies: require('./lib/strategies'), hephaestus: require('./lib/hephaestus') }
+module.exports = { Arr, Str, Num, hephaestus: require('./lib/hephaestus') }
