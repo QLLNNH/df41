@@ -1,13 +1,13 @@
 'use strict';
-const { hephaestus, Arr, Str, Num, Obj } = require('../index');
+const { hephaestus, Arr, Str, Num, Obj, Boo } = require('../index');
 
 const schema = {
-    name: Str.of().trim().non_empty().origin()
+    name: Boo.of()
 };
 
 const aegis = hephaestus.forge(schema);
 
 const bank = aegis();
-bank.name = ' xushen';
+bank.name = true;
 
 console.log(bank);
