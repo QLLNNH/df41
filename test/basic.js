@@ -5,9 +5,8 @@ const schema = {
     name: Boo.of()
 };
 
-const aegis = hephaestus.forge(schema);
+const bank = hephaestus.forge(schema)();
 
-const bank = aegis();
 bank.name = true;
 
 console.log(bank);
