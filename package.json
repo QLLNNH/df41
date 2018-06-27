@@ -4,7 +4,7 @@
   "description": "Guard of object setter by proxy with ES6",
   "main": "index.js",
   "scripts": {
-    "test": "to be continue"
+    "test": "ava tests/strategies/"
   },
   "keywords": [
     "guard",
@@ -15,6 +15,9 @@
   ],
   "dependencies": {
     "ramda": "0.25.0"
+  },
+  "devDependencies": {
+    "ava": "0.25.0"
   },
   "repository": {
     "type": "git",
