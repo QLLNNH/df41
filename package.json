@@ -21,8 +21,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/QLLNNH/df41.git"
+    "url": "git+https://github.com/QLLNNH/df41.git"
   },
   "author": "chaconne",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QLLNNH/df41/issues"
+  },
+  "homepage": "https://github.com/QLLNNH/df41#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  }
 }
