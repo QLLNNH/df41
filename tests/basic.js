@@ -1,17 +1,13 @@
 'use strict';
 const { convert, Arr, Str, Num, Obj, Boo } = require('../index');
-const fn = function (x) {
-    if (x !== this.age) return x;
-    else throw `${x} === ${this.age}`;
-};
+
 const schema = {
-    test: Str
-        .of()
-        .to_num().gte(10)
+    age: Num
+        .of('limit mistake').default(10)
+        .ceil().gte(1, 'limit gte 1').lte(30, 'limit lte 30')
 };
 
 const bank = convert(schema)();
-bank.name = 'hello';
-bank.test = false;
+bank.age = 0.1;
 
 console.log(bank);
