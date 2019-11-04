@@ -5,13 +5,13 @@ const fn = function (x) {
     else throw `${x} === ${this.age}`;
 };
 const schema = {
-    age: Num.of(),
-    name: Str.of('name').lt(5).extend(fn).to_upper_case()
+    test: Str
+        .of()
+        .to_num().gte(10)
 };
 
 const bank = convert(schema)();
-
-bank.age = 100;
-bank.name = 'edad';
+bank.name = 'hello';
+bank.test = false;
 
 console.log(bank);
