@@ -1,6 +1,6 @@
 {
   "name": "df41",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Guard of object setter by proxy with ES6",
   "main": "index.js",
   "scripts": {
@@ -14,10 +14,10 @@
     "validator"
   ],
   "dependencies": {
-    "ramda": "0.26.1"
+    "ramda": "0.27.0"
   },
   "devDependencies": {
-    "ava": "2.4.0"
+    "ava": "3.6.0"
   },
   "repository": {
     "type": "git",

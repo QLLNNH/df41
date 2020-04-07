@@ -1,13 +1,11 @@
 'use strict';
-const { convert, Arr, Str, Num, Obj, Boo } = require('../index');
+const { convert, Arr, Str, Num, Obj, Boo, Time } = require('../index');
 
 const schema = {
-    age: Num
-        .of('limit mistake').default(10)
-        .ceil().gte(1, 'limit gte 1').lte(30, 'limit lte 30')
+    ts: Time.of()
 };
 
 const bank = convert(schema)();
-bank.age = 0.1;
+bank.ts = new Date('2015-01');
 
 console.log(bank);
