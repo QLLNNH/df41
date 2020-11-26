@@ -1,11 +1,25 @@
 'use strict';
-const { convert, Arr, Str, Num, Obj, Boo, Time } = require('../index');
+const R = require('ramda');
+const { define, Arr, Boo, Num, Obj, Str, Time } = require('../index');
 
-const schema = {
-    ts: Time.of()
-};
 
-const bank = convert(schema)();
-bank.ts = new Date('2015-01');
+try {
+    const bank = define({
+        k: Time.of('PDATE invalid').extend((x) => {
+            if (x.getFullYear() < 2000) {
+                throw 'PDATE < 2000';
+            }
+            else if (x.getFullYear() > new Date().getFullYear()) {
+                throw 'PDATE too big';
+            }
+            return x;
+        })
+    })();
 
-console.log(bank);
+    bank.k = new Date();
+    console.log(bank);
+}
+catch (err) {
+    console.error(err.message || err);
+}
+
