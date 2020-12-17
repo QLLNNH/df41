@@ -5,10 +5,14 @@ const { define, Arr, Boo, Num, Obj, Str, Time } = require('../index');
 
 try {
     const bank = define({
-        k: Str.of('str err').trim().eq(2, 'eq err')
+        k: Num.of('k err').gt(3),
+        m: Num.of().gt(3).init(1).catch('100')
     })();
 
-    bank.k = '222';
+    bank.k = 4;
+    bank.m = 's';
+    console.log(bank.k);
+    console.log(bank.m);
     console.log(bank);
 }
 catch (err) {
