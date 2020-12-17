@@ -5,14 +5,11 @@ const { define, Arr, Boo, Num, Obj, Str, Time } = require('../index');
 
 try {
     const bank = define({
-        k: Num.of('k err').gt(3),
-        m: Num.of().gt(3).init(1).catch('100')
+        n: Num.of().range([1.1, 33], 'n length error'),
     })();
 
-    bank.k = 4;
-    bank.m = 's';
-    console.log(bank.k);
-    console.log(bank.m);
+    bank.n = 1.1;
+    console.log(bank.n);
     console.log(bank);
 }
 catch (err) {
