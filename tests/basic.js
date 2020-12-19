@@ -5,7 +5,7 @@ const { define, Arr, Boo, Num, Obj, Str, Time } = require('../index');
 
 try {
     const bank = define({
-        n: Num.of().range([1.1, 33]).init(30),
+        n: Num.of().default(100)
     })();
 
     bank.n = undefined;
