@@ -5,10 +5,10 @@ const { define, Arr, Boo, Num, Obj, Str, Time } = require('../index');
 
 try {
     const bank = define({
-        n: Num.of().default(100)
+        n: Time.of().default('-99')
     })();
 
-    bank.n = undefined;
+    bank.n = '2019-10-10T00:00:00.000Z';
     console.log(bank.n);
     console.log(bank);
 }
